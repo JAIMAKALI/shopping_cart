@@ -1,0 +1,71 @@
+<div class='row'>
+<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+
+<h1>checkout </h1>
+<h3>total Ammount: {{total}}</h3>
+<div class="alert alert-danger hidden" id="payment-errors">
+
+</div>
+<form class="" action="/shopping_cart/checkout" method="post" id='checkout-form'>
+  <div class="row">
+    <div class="form-group">
+    <div class='col-xs-12'>
+<label for="name">Name</label>
+<input type="text" name="name" class="form-control" required>
+    </div>
+    </div>
+
+
+
+    <div class="form-group">
+    <div class='col-xs-12'>
+<label for="address">Address</label>
+<input type="text" name="address" class="form-control" required>
+    </div>
+    </div>
+
+
+  <div class="form-group">
+  <div class='col-xs-12'>
+<label for="cardholder_name">Cardholder name</label>
+<input type="text" name="cardholder_name" class="form-control" id="card-name" required>
+  </div>
+  </div>
+
+  <div class="form-group">
+  <div class='col-xs-12'>
+<label for="card_number">Card Number</label>
+<input type="text" name="card_number" class="form-control" id="card-number" placeholder="4242 4242 4242 4242" required>
+  </div>
+  </div>
+
+  <div class="form-group">
+  <div class='col-xs-6'>
+<label for="exp_month">Exp Month</label>
+<input type="text" name="exp_year" class="form-control" id="card-expiry-month" placeholder="MM" required>
+  </div>
+  </div>
+
+  <div class="form-group">
+  <div class='col-xs-6'>
+<label for="exp_year">Exp Year</label>
+<input type="text" name="exp_year" class="form-control" id="card-expiry-year" placeholder="YYYY" required>
+  </div>
+  </div>
+
+  <div class="form-group">
+  <div class='col-xs-12'>
+<label for="cvv">cvv</label>
+<input type="text" name="cvv" class="form-control" id="card-cvc" placeholder="568"required>
+  </div>
+  </div>
+
+</div>
+<br />
+<button type='submit' class='btn btn-success'>Buy now</button>
+</form>
+</div>
+</div>
+
+<script src="https://js.stripe.com/v2/"></script>
+<script src="/javascripts/checkout.js"></script>

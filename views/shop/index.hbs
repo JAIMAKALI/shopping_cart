@@ -1,0 +1,27 @@
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="alet alert-success {{#if noMsg}}hidden{{/if}}">
+      {{successMsg}}
+    </div>
+</div>
+</div>
+
+{{#each products}}
+<div class="row">
+  {{#each this}}
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="{{this.imageUrl}}" alt="...">
+      <div class="caption">
+        <h3>{{this.title}}</h3>
+        <p>{{this.description}}</p>
+        <div class="clearfix">
+  <div class="pull-left">Rs. {{this.price}} per Kg</div>
+          <a href="/add_to_shopping/{{this._id}}" class="btn btn-success pull-right" role="button">Add to Cart</a></div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{/each}}
