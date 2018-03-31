@@ -33,7 +33,7 @@ router.post('/checkout',isLoggin,(req,res)=>{
   }
     var cart=new Cart(req.session.cart);
     // See your keys here: https://dashboard.stripe.com/account/apikeys
-var stripe = require("stripe")("sk_test_4uuUIco3rJvydnVhvo4p3mZz");
+var stripe = require("stripe")("sk_test_4uuUIco3rJvydnVhvo4p3mZ");
 
 // Token is created using Checkout or Elements!
 // Get the payment token ID submitted by the form:
